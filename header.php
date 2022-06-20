@@ -1,3 +1,6 @@
+<?php  
+	// require_once('db.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -14,8 +17,21 @@
 		<div class="top_nav">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8"></div>
-					<div class="col-md-4"></div>
+					<div class="col-md-8">
+						<ul class="top_contact">
+							<li><a href="tel:+565975685"><i class="fa-solid fa-mobile-screen"></i> +565 975 685</a></li>
+							<li><a href="mailto:info@premiumcoding.com"><i class="fa-solid fa-envelope"></i> info@premiumcoding.com</a></li>
+							<li><i class="fa-solid fa-clock"></i> Monday - Friday, 8.00 - 20.00</li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul class="first_nav">
+							<li><a href="#">Latest News</a></li>
+							<li><a href="#">Login</a></li>
+							<li><a href="#">Register</a></li>
+							<li><a href="#">About us</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -24,34 +40,38 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="logo">
-							
-						</div>
-						<div class="main_nav">
-							<ul>
-								<li>
-									<a href="#">Home</a>
-								</li>
-								<li>
-									<a href="#">Apparel</a>
-								</li>
-								<li>
-									<a href="#">Fashion</a>
-								</li>
-								<li>
-									<a href="#">News</a>
-								</li>
-								<li>
-									<a href="#">Portfolio</a>
-								</li>
-								<li>
-									<a href="#">Contact</a>
-								</li>
-							</ul>
+						<div class="logo text-center">
+							<a href="#">
+								<h1>Reve<span>nant</span></h1>
+								<h3>CREATIVE BUSINESS THEME FOR CORPORATIONS</h3>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="main_nav text-center">
+				<ul>
+					<li>
+						<a href="#">Home <i class="fa-solid fa-angles-right"></i></a>
+					</li>
+					<li>
+						<a href="#">Apparel <i class="fa-solid fa-angles-right"></i></a>
+					</li>
+					<li>
+						<a href="#">Fashion <i class="fa-solid fa-angles-right"></i></a>
+					</li>
+					<li>
+						<a href="#">News <i class="fa-solid fa-angles-right"></i></a>
+					</li>
+					<li>
+						<a href="#">Portfolio <i class="fa-solid fa-angles-right"></i></a>
+					</li>
+					<li>
+						<a href="#">Contact <i class="fa-solid fa-angles-right"></i></a>
+					</li>
+				</ul>
+			</div>
 		</nav>
-
 	</header>
+
+	
