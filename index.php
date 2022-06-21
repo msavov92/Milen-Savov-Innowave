@@ -22,28 +22,28 @@
 			</div>
 		</div>
 		<div class="row latest_part">
-			<div class="col-md-3">
+			<div class="col-lg-3 col-md-6">
 				<div class="read_more">
 					<h3>Responsive Design</h3>
 					<p>Lorem ipsum dolor sit amet, co ctetuer adipiscing elit, sed di nonummy nibh euismod te.</p>
 					<a href="#">Read more <i class="fa-solid fa-angles-right"></i></a>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-lg-3 col-md-6">
 				<div class="read_more">
 					<h3>Responsive Design</h3>
 					<p>Lorem ipsum dolor sit amet, co ctetuer adipiscing elit, sed di nonummy nibh euismod te.</p>
 					<a href="#">Read more <i class="fa-solid fa-angles-right"></i></a>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-lg-3 col-md-6">
 				<div class="read_more">
 					<h3>Responsive Design</h3>
 					<p>Lorem ipsum dolor sit amet, co ctetuer adipiscing elit, sed di nonummy nibh euismod te.</p>
 					<a href="#">Read more <i class="fa-solid fa-angles-right"></i></a>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-lg-3 col-md-6">
 				<div class="read_more">
 					<h3>Responsive Design</h3>
 					<p>Lorem ipsum dolor sit amet, co ctetuer adipiscing elit, sed di nonummy nibh euismod te.</p>
@@ -61,7 +61,7 @@
 			<div class="col-md-12 text-center">
 				<p>Lorem ipsum dolor sit amet, coctetuer adipiscing elit, sed di <span>nonummy</span> nibh euismod te.</p>
 			</div>
-			<div class="owl-carousel portfolio_slider">
+			<div id="owl-demo" class="owl-carousel owl-theme">
 				<a href="#">
 					<article>
 						<img src="assets/img/portfolio1.jpg" alt="Portfolio image">
@@ -134,7 +134,7 @@
 <div id="question">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-lg-6 col-xs-12">
 				<div class="testimonial">
 					<h2>TESTIMONIALS</h2>
 					<div class="answer">
@@ -157,7 +157,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-lg-6 col-xs-12">
 				<div class="asked">
 					<h2>FREQUENTLY ASKED QUESTIONS</h2>
 					<div class="accordion-body">
@@ -282,32 +282,57 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="partner">
-					<div class="box">
-						<a href="#">
-							<img src="assets/img/partners1.png" alt="Partners logo">
-						</a>
-					</div>
-					<div class="box">
-						<a href="#">
-							<img src="assets/img/partners2.png" alt="Partners logo">	
-						</a>
-					</div>
-					<div class="box">
-						<a href="#">
-							<img src="assets/img/partners3.png" alt="Partners logo">	
-						</a>
-					</div>
-					<div class="box">
-						<a href="#">
-							<img src="assets/img/partners4.png" alt="Partners logo">	
-						</a>
-					</div>
-					<div class="box">
-						<a href="#">
-							<img src="assets/img/partners5.png" alt="Partners logo">	
-						</a>
-					</div>
+				<div id="owl-demo2" class="owl-carousel owl-theme">
+						<div class="item">
+							<a href="#">
+								<img src="assets/img/partners1.png" alt="Partners logo">
+							</a>
+						</div>
+						<div class="item">
+							<a href="#">
+								<img src="assets/img/partners2.png" alt="Partners logo">	
+							</a>
+						</div>
+						<div class="item">
+							<a href="#">
+								<img src="assets/img/partners3.png" alt="Partners logo">	
+							</a>
+						</div>
+						<div class="item">
+							<a href="#">
+								<img src="assets/img/partners4.png" alt="Partners logo">	
+							</a>
+						</div>
+						<div class="item">
+							<a href="#">
+								<img src="assets/img/partners5.png" alt="Partners logo">	
+							</a>
+						</div>
+						<div class="item">
+							<a href="#">
+								<img src="assets/img/partners1.png" alt="Partners logo">
+							</a>
+						</div>
+						<div class="item">
+							<a href="#">
+								<img src="assets/img/partners2.png" alt="Partners logo">	
+							</a>
+						</div>
+						<div class="item">
+							<a href="#">
+								<img src="assets/img/partners3.png" alt="Partners logo">	
+							</a>
+						</div>
+						<div class="item">
+							<a href="#">
+								<img src="assets/img/partners4.png" alt="Partners logo">	
+							</a>
+						</div>
+						<div class="item">
+							<a href="#">
+								<img src="assets/img/partners5.png" alt="Partners logo">	
+							</a>
+						</div>
 				</div>
 			</div>
 		</div>
@@ -317,3 +342,8 @@
 <?php 
 	include_once('footer.php');
 ?>
+
+
+
+
+

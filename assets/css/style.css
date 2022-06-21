@@ -58,12 +58,28 @@ a:focus {
 
 /*Main CSS*/
 header .top_nav {
+	position: relative;
 	background: #3bbdfb;
 	padding: 10px 0;
 	overflow: hidden;
 }
+header .hamburger {
+	display: none;
+	position: absolute;
+	top: 15px;
+	right: 10px;
+	cursor: pointer;
+}
+header .hamburger span {
+	color: #fff;
+	font-size: 15px;
+}
+header .hamburger i {
+	font-size: 22px;
+	color: #fff;
+}
 header .top_nav ul li {
-	font-size: 12px;
+	font-size: 14px;
 	color: #fff;
 	display: inline-block;
 	margin-right: 20px;
@@ -73,6 +89,10 @@ header .top_nav ul li i {
 }
 header .top_nav ul li a {
 	color: #fff;
+	transition: 0.3s;
+}
+header .top_nav ul li a:hover {
+	color: #000;
 }
 header .top_nav .first_nav {
 	text-align: right;
@@ -112,8 +132,8 @@ header nav .logo a h3 {
 	margin-top: 5px;
 }
 header nav .main_nav {
-	border-top: 2px solid #d9d9d9;
-	border-bottom: 2px solid #d9d9d9;
+	border-top: 3px solid #d9d9d9;
+	border-bottom: 3px solid #d9d9d9;
 }
 header nav .main_nav ul li {
 	position: relative;
@@ -121,11 +141,27 @@ header nav .main_nav ul li {
 	margin-right: 20px;
 	padding: 35px 18px;
 }
+header nav .main_nav ul li:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 0%;
+	background: #f7f7f7;
+	transition: 0.3s;
+}
+header nav .main_nav ul li:hover:before {
+	height: 100%;
+}
 header nav .main_nav ul li a {
+	position: relative;
 	font-size: 16px;
 	color: #2a2b2c;
-	font-family: 'PT Sans', sans-serif;
 }
+
 header nav .main_nav ul li a > i {
 	font-size: 10px;
 }
@@ -227,7 +263,7 @@ header nav .main_nav ul li a > i {
     height: 65px;
     border-radius: 50%;
     font-size: 28px;
-    padding-top: 15px
+    padding-top: 18px
 }
 #latest .latest_part .read_more h3 {
 	font-size: 18px;
@@ -293,24 +329,40 @@ header nav .main_nav ul li a > i {
 #latest_news p > span {
 	color: #3bbdfb;
 }
-#portfolio .portfolio_slider article {
+#portfolio article {
+	position: relative;
 	background: #fff;
 	border: 1px solid #f3f3f3;
 	border-bottom: 1px solid #d4d4d4;
-
 }
-#portfolio .portfolio_slider article h3 {
+#portfolio article:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 0%;
+	background: #3bbdfb;
+	opacity: 0.5;
+	transition: 0.3s;
+}
+#portfolio article:hover:before {
+	height: 100%;
+}
+#portfolio article h3 {
 	font-weight: bold;
 	font-size: 16px;
 	padding: 20px 15px;
 	color: #000;
 }
-#portfolio .portfolio_slider article .dots {
+#portfolio article .dots {
 	position: relative;
 	margin: 0 15px;
 	border: 1px dashed #ccc;
 }
-#portfolio .portfolio_slider article .dots:before {
+#portfolio article .dots:before {
     content: '';
     position: absolute;
     left: 0;
@@ -320,7 +372,10 @@ header nav .main_nav ul li a > i {
     border-radius: 50%;
     background: #3bbdfb;
 }
-#portfolio .portfolio_slider article p {
+.owl-dots {
+	display: none;
+}
+#portfolio article p {
 	font-size: 14px;
 	margin: 20px 15px;
 	line-height: 22px;
@@ -328,7 +383,7 @@ header nav .main_nav ul li a > i {
 }
 #portfolio .owl-nav {
 	position: absolute;
-	top: -30px;
+	top: -40px;
 	right: 10px;
 }
 #portfolio .owl-nav button {
@@ -517,35 +572,25 @@ header nav .main_nav ul li a > i {
 	background: #f7f7f9;
 	padding: 90px 0;
 }
-#partners .partner {
-	display: flex;
-	justify-content: space-between;
-}
-#partners .partner .box {
+#partners .item {
     position: relative;
     background: #fff;
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    padding: 15px;
     text-align: center;
     border-bottom: 3px solid #e0d9d9;
+    margin: 0 5px;
     transition: 0.3s;
 }
-#partners .partner .box:hover {
+#partners .item:hover {
     background: rgba(224, 217, 217, .6);
 }
-#partners .partner .box img {
-	display: block;
-	width: 100%;
-	max-width: 120px;
+#partners .item img {
 	height: 120px;
 	padding: 10px;
-	margin: 0 auto;
 }
 footer .top_footer {
 	background: #37bcfb;
 	padding: 15px 0;
+	border-bottom: 3px solid #fff;
 }
 footer .top_footer h2 {
 	color: #fff;
@@ -560,10 +605,17 @@ footer .bottom_footer {
 	background: #2a2b2c;
 	padding: 8px 0 30px;	
 }
+footer .top_footer ul {
+	margin-top: 20px;
+}
 footer .bottom_footer ul li,
 footer .top_footer ul li {
 	margin-right: 20px;
 	display: inline-block;
+}
+footer .top_footer ul li a {
+	color: #fff;
+	font-size: 18px;
 }
 footer .bottom_footer ul li a {
 	text-transform: uppercase;
@@ -576,28 +628,216 @@ footer .bottom_footer p {
 	text-align: right;
 }
 
-
-.search-input{
-  width: 100%;
-  max-width: 200px;
-  padding: 10px;
-  border: 4px solid #111d5e;
-  border-radius:10px 0 0 10px ;
-  border-right: none;
-  outline: none;
-  font-size: 20px;
-  color: tomato;
-  background: none;
+footer .top_footer form {
+	position: relative;
+}
+::placeholder {
+	color: #fff;
+	font-size: 16px;
+}
+.search-input {
+  	width: 100%;
+    max-width: 280px;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    background: none;
 }
 .search-button{
-	text-align: center;
-	height: 41px;
-	width: 50px;
-	outline: none;
-	cursor: pointer;
-	border: 4px solid #111d5e;
-	border-radius: 0 10px 10px 0 ;
-	border-left: none;
-	background: none;
-	font-size: 20px;
+    text-align: center;
+    height: 49px;
+    width: 49px;
+    outline: none;
+    cursor: pointer;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    background: #fff;
+    position: absolute;
+    right: 10px;
+    font-size: 16px;
+}
+/*Scroll to top*/
+#button {
+  	display: inline-block;
+    background-color: #3bbdfb;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 25px;
+  line-height: 45px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+@media only screen and (max-width: 1200px) {
+	
+	#latest .latest_part .read_more {
+		border-radius: 0;
+	}
+	#latest_news .box {
+		text-align: center;
+		display: block;
+		border: 2px solid #e6e6e6;
+	}
+	#latest_news .box .image {
+		margin-right: 0;
+	}
+	#latest_news .box .image img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	#latest_news .box .content h3 {
+		margin-top: 10px;
+	}
+	footer .top_footer h2 {
+		font-size: 18px;
+	}
+	footer .top_footer p {
+		font-size: 12px;
+	}
+	footer .top_footer ul li {
+		margin-right: 10px;
+	}
+	footer .top_footer ul li a {
+		font-size: 16px;
+	}
+	.search-button {
+		right: 0;
+	}
+	.search-input {
+		border-radius: 10px;
+	}
+	header .top_nav .first_nav li:before {
+		display: none;
+	}
+	header .top_nav .first_nav {
+		text-align: left;
+	}
+	header .top_nav ul li {
+		margin-right: 10px!important;
+	}
+}
+@media only screen and (max-width: 992px) {
+	header .top_nav {
+		padding: 20px 0;
+	}
+	header .hamburger {
+		display: block;
+	}
+	header nav .main_nav {
+		display: none;
+	    border-top: 0;
+	    position: absolute;
+	    top: 70px;
+	    left: 0;
+	    right: 0;
+	    background: #fff;
+	    z-index: 999;
+	    padding: 30px 0;
+	}
+	header nav .main_nav li {
+		display: block!important;
+		padding: 20px 0!important;
+	}
+	header nav .main_nav li a > i {
+		display: none;
+	}
+	header .top_nav ul li {
+		font-size: 12px;
+	}
+	header .hamburger {
+		right: 20px;
+		top: 25px;
+	}
+	#latest .latest_part .read_more {
+		margin-bottom: 30px;
+		width: 100%;
+		height: auto;
+	}
+	#latest .latest_part .read_more a {
+		padding: 10px 20px;
+		font-size: 16px;
+	}
+	footer .top_footer,
+	footer .bottom_footer {
+		text-align: center;
+	}
+	footer .top_footer ul {
+		margin-bottom: 20px;
+	}
+	footer .top_footer ul li a {
+		font-size: 20px;
+	}
+	footer .top_footer h2 {
+		font-size: 22px;
+	}
+	footer .top_footer p {
+		font-size: 15px;
+	}
+	.search-input {
+		max-width: 100%;
+		margin-top: 20px;
+	}
+	.search-button {
+		top: 20px;
+	}
+	footer .bottom_footer ul {
+		margin: 10px 0;
+	}
+	footer .bottom_footer p {
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 768px) {
+	#revenant img {
+		display: none;
+	}
+	#revenant h2 {
+		font-size: 52px;
+	}
+	#latest .latest_part .read_more {
+		margin: 20px auto;
+	}
+	#latest_news .box {
+	    width: 100%;
+	    max-width: 300px;
+	    height: auto;
+	    margin: 20px auto;
+	}
+}
+@media only screen and (max-width: 550px) {
+	header nav .logo a h1 {
+		font-size: 50px;
+	}
+	header .top_nav .first_nav {
+		display: none!important;
+	}
 }
